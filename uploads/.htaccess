@@ -1,0 +1,10 @@
+# Deny all uploads except application-generated, re-encoded JPEG filenames.
+Options -Indexes -ExecCGI
+Require all denied
+<FilesMatch "^[a-f0-9]{32}\.jpg$">
+    Require all granted
+    ForceType image/jpeg
+    <IfModule mod_headers.c>
+        Header set X-Content-Type-Options "nosniff"
+    </IfModule>
+</FilesMatch>

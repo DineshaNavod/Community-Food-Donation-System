@@ -1,0 +1,52 @@
+<?php
+declare(strict_types=1);
+if (PHP_SAPI!=='cli') {http_response_code(403);exit;}
+require_once __DIR__.'/../includes/db.php';require_once __DIR__.'/../includes/admin_workflow.php';
+$pdo=db();$prefix='admin-flow-'.bin2hex(random_bytes(5));$users=[];$foods=[];$requests=[];$tasks=[];
+function check(bool $ok,string $label):void {if (!$ok) {throw new RuntimeException($label);}echo 'PASS: '.$label.PHP_EOL;}
+function browser():CurlHandle {$c=curl_init();curl_setopt_array($c,[CURLOPT_RETURNTRANSFER=>true,CURLOPT_HEADER=>true,CURLOPT_COOKIEFILE=>'',CURLOPT_TIMEOUT=>15]);return $c;}
+function request(CurlHandle $c,string $path,?array $fields=null):array {curl_setopt($c,CURLOPT_URL,'http://localhost/Community%20Food%20Donation%20System/'.$path);if ($fields===null) {curl_setopt($c,CURLOPT_HTTPGET,true);}else {curl_setopt($c,CURLOPT_POST,true);curl_setopt($c,CURLOPT_POSTFIELDS,http_build_query($fields));}$r=curl_exec($c);if ($r===false) {throw new RuntimeException(curl_error($c));}$size=curl_getinfo($c,CURLINFO_HEADER_SIZE);return [(int)curl_getinfo($c,CURLINFO_HTTP_CODE),substr($r,0,$size),substr($r,$size)];}
+function token(string $html):string {preg_match('/name="csrf_token" value="([a-f0-9]{64})"/',$html,$m);if (!isset($m[1])) {throw new RuntimeException('Missing CSRF');}return $m[1];}
+function login(CurlHandle $c,string $email):void {[,, $html]=request($c,'login.php');[$status]=request($c,'login.php',['csrf_token'=>token($html),'email'=>$email,'password'=>'Admin-flow-2026!']);check($status===303,'fixture login');}
+function state(int $food):array {$q=db()->prepare('SELECT d.status,r.status AS request_status,r.decided_at,t.id AS task_id,t.status AS task_status,t.volunteer_id,t.accepted_at,t.collected_at,t.delivered_at FROM donations d LEFT JOIN donation_requests r ON r.donation_id=d.id LEFT JOIN collection_tasks t ON t.request_id=r.id WHERE d.id=?');$q->execute([$food]);return $q->fetch();}
+try {
+    $hash=password_hash('Admin-flow-2026!',PASSWORD_DEFAULT);
+    foreach (['admin'=>'admin','donor'=>'donor','org'=>'organization','a'=>'volunteer','b'=>'volunteer','blocked'=>'volunteer'] as $name=>$role) {$pdo->prepare('INSERT INTO users (full_name,email,password_hash,phone,address,role,status) VALUES (?,?,?,?,?,?,?)')->execute([$prefix.'-'.$name,$prefix.'-'.$name.'@example.test',$hash,'0700000000','Test address',$role,$name==='blocked'?'pending':'active']);$users[$name]=(int)$pdo->lastInsertId();}
+    $pdo->prepare('INSERT INTO organizations (user_id,organization_name) VALUES (?,?)')->execute([$users['org'],$prefix]);$org=(int)$pdo->lastInsertId();$past=date('Y-m-d H:i:s',time()-600);
+    foreach (['available','pending','assigned','accepted','collected','delivered','completed','expired','cancelled','reassign'] as $name) {
+        $dState=match($name) {'available','collected','delivered','completed','cancelled'=>$name,'pending'=>'requested',default=>'assigned'};
+        $pdo->prepare('INSERT INTO donations (donor_id,food_name,category,description,quantity,quantity_unit,pickup_location,available_at,deadline_at,status,completed_at) VALUES (?,?,?,?,?,?,?,?,?,?,?)')->execute([$users['donor'],$prefix.'-'.$name,'produce','Test food',1,'kg','Private pickup',date('Y-m-d H:i:s',time()-7200),date('Y-m-d H:i:s',$name==='expired'?time()-300:time()+7200),$dState,$name==='completed'?$past:null]);$foods[$name]=(int)$pdo->lastInsertId();
+        if ($name==='available') {continue;}
+        $rState=$name==='pending'?'pending':($name==='cancelled'?'cancelled':'approved');$pdo->prepare('INSERT INTO donation_requests (donation_id,organization_id,delivery_address,status,decided_at) VALUES (?,?,?,?,?)')->execute([$foods[$name],$org,'Private delivery',$rState,$rState==='pending'?null:$past]);$requests[$name]=(int)$pdo->lastInsertId();
+        if ($name==='pending') {continue;}
+        $tState=match($name) {'accepted','collected','cancelled'=>$name,'delivered','completed'=>'delivered',default=>'assigned'};
+        $pdo->prepare('INSERT INTO collection_tasks (request_id,volunteer_id,assigned_by,status,assigned_at,accepted_at,collected_at,delivered_at) VALUES (?,?,?,?,?,?,?,?)')->execute([$requests[$name],$users['a'],$users['admin'],$tState,$past,in_array($tState,['accepted','collected','delivered'],true)?$past:null,in_array($tState,['collected','delivered'],true)?$past:null,$tState==='delivered'?$past:null]);$tasks[$name]=(int)$pdo->lastInsertId();
+    }
+    $admin=browser();$a=browser();$b=browser();$donor=browser();login($admin,$prefix.'-admin@example.test');login($a,$prefix.'-a@example.test');login($b,$prefix.'-b@example.test');login($donor,$prefix.'-donor@example.test');
+    [,, $html]=request($admin,'admin/donation.php?id='.$foods['reassign']);$csrf=token($html);check(str_contains($html,'Reassign volunteer before acceptance') && str_contains($html,'confirm_cancel'),'eligible donation exposes both controls');
+    $path='admin/reassign_volunteer.php?id='.$tasks['reassign'];$fields=['csrf_token'=>$csrf,'volunteer_id'=>$users['b'],'current_volunteer_id'=>$users['a'],'confirm_reassign'=>'yes'];
+    [$status]=request($donor,$path,[]);check($status===403,'non-admin reassignment blocked');[$status]=request($admin,$path);check($status===405,'GET reassignment blocked');
+    [$status]=request($admin,$path,array_replace($fields,['csrf_token'=>'bad']));check($status===403,'reassignment CSRF enforced');
+    [$status]=request($admin,$path,array_replace($fields,['confirm_reassign'=>'']));check($status===400,'reassignment acknowledgement required');
+    foreach (['blocked','donor','a'] as $name) {[$status]=request($admin,$path,array_replace($fields,['volunteer_id'=>$users[$name]]));check($status===409,'invalid '.$name.' replacement rejected');}
+    foreach (['accepted','collected','delivered','completed','expired','cancelled'] as $name) {$before=state($foods[$name]);[$status]=request($admin,'admin/reassign_volunteer.php?id='.$tasks[$name],$fields);check($status===409 && state($foods[$name])===$before,$name.' reassignment rejected without mutation');}
+    $before=state($foods['reassign']);[$status]=request($admin,$path,$fields);$after=state($foods['reassign']);check($status===303 && $before['task_id']===$after['task_id'] && (int)$after['volunteer_id']===$users['b'] && $after['task_status']==='assigned','reassignment updates same task without duplicate or premature acceptance');
+    [$status]=request($a,'volunteer/task.php?id='.$tasks['reassign']);check($status===404,'old volunteer loses task access');[$status,,$html]=request($b,'volunteer/task.php?id='.$tasks['reassign']);check($status===200 && str_contains($html,'value="accept"'),'new volunteer receives task');
+    try {update_volunteer_task($users['a'],$tasks['reassign'],'accept');throw new RuntimeException('Old volunteer accepted task');}catch (OutOfBoundsException $e) {check(true,'old volunteer stale update rejected');}
+    [,, $html]=request($admin,'admin/donation.php?id='.$foods['reassign']);$fields['csrf_token']=token($html);[$status]=request($admin,$path,$fields);check($status===409,'stale reassignment form rejected');
+    update_volunteer_task($users['b'],$tasks['reassign'],'accept');try {admin_reassign_task($users['admin'],$tasks['reassign'],$users['a'],$users['b']);throw new RuntimeException('Accepted task reassigned');}catch (DomainException $e) {check(true,'acceptance locks assignment');}
+    $cancel='admin/cancel_donation.php?id='.$foods['assigned'];$cancelFields=['csrf_token'=>$fields['csrf_token'],'confirm_cancel'=>'yes'];
+    [$status]=request($donor,$cancel,[]);check($status===403,'non-admin cancellation blocked');[$status]=request($admin,$cancel);check($status===405,'GET cancellation blocked');
+    [$status]=request($admin,$cancel,array_replace($cancelFields,['csrf_token'=>'bad']));check($status===403,'cancellation CSRF enforced');[$status]=request($admin,$cancel,['csrf_token'=>$cancelFields['csrf_token']]);check($status===400,'cancellation acknowledgement required');
+    foreach (['collected','delivered','completed','cancelled'] as $name) {$before=state($foods[$name]);[$status]=request($admin,'admin/cancel_donation.php?id='.$foods[$name],$cancelFields);check($status===409 && state($foods[$name])===$before,$name.' cancellation rejected without mutation');}
+    foreach (['available','pending','assigned','accepted','expired','reassign'] as $name) {
+        [,, $html]=request($admin,'admin/donation.php?id='.$foods[$name]);$before=state($foods[$name]);[$status]=request($admin,'admin/cancel_donation.php?id='.$foods[$name],['csrf_token'=>token($html),'confirm_cancel'=>'yes']);$after=state($foods[$name]);
+        check($status===303 && $after['status']==='cancelled' && ($after['request_status']===null || $after['request_status']==='cancelled') && ($after['task_status']===null || $after['task_status']==='cancelled'),'atomic cancellation for '.$name);
+        check($after['task_id']===$before['task_id'] && $after['accepted_at']===$before['accepted_at'] && ($before['decided_at']===null || $after['decided_at']===$before['decided_at']),'retained task/decision history for '.$name);
+    }
+    [,, $html]=request($a,'volunteer/task.php?id='.$tasks['accepted']);check(str_contains($html,'Contact the administrator before travelling') && !str_contains($html,'value="collect"') && !str_contains($html,'Private delivery'),'cancelled accepted task blocks pickup and hides delivery contacts');
+    $pdo->prepare("UPDATE users SET status='suspended' WHERE id=?")->execute([$users['admin']]);try {admin_cancel_food($users['admin'],$foods['collected']);throw new RuntimeException('Inactive admin accepted');}catch (DomainException $e) {check(true,'inactive administrator service rejected');}
+    foreach ([$admin,$a,$b,$donor] as $client) {curl_close($client);}
+} catch (Throwable $exception) {fwrite(STDERR,'FAIL: '.$exception->getMessage().PHP_EOL);$failed=true;}
+finally {foreach ($foods as $id) {$pdo->prepare('DELETE t FROM collection_tasks t JOIN donation_requests r ON r.id=t.request_id WHERE r.donation_id=?')->execute([$id]);$pdo->prepare('DELETE FROM donation_requests WHERE donation_id=?')->execute([$id]);$pdo->prepare('DELETE FROM donations WHERE id=?')->execute([$id]);}if (isset($org)) {$pdo->prepare('DELETE FROM organizations WHERE id=?')->execute([$org]);}foreach ($users as $id) {$pdo->prepare('DELETE FROM users WHERE id=?')->execute([$id]);}echo 'Only administrator workflow fixtures removed.'.PHP_EOL;}
+exit(isset($failed)?1:0);

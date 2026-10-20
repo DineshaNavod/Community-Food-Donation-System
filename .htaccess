@@ -1,0 +1,7 @@
+# Prevent Apache from listing the contents of project folders.
+Options -Indexes
+
+# Keep internal project notes out of the browser.
+<FilesMatch "(?i)^(PROJECT_PROGRESS\.md|AGENTS\.md)$">
+    Require all denied
+</FilesMatch>

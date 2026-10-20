@@ -1,0 +1,2 @@
+# PHP can include these files, but browsers must not access them directly.
+Require all denied

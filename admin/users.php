@@ -1,0 +1,36 @@
+<?php
+declare(strict_types=1);
+require_once __DIR__.'/../includes/auth.php';$user=require_role('admin');
+require_once __DIR__.'/../includes/dashboard.php';
+$roles=['all','donor','organization','volunteer','admin'];$statuses=['all','pending','active','rejected','suspended'];
+$role=$_GET['role']??'all';$status=$_GET['status']??'all';$search=$_GET['search']??'';
+$page=filter_var($_GET['page']??'1',FILTER_VALIDATE_INT,['options'=>['min_range'=>1,'max_range'=>1000000]]);
+if (!is_string($role) || !in_array($role,$roles,true) || !is_string($status) || !in_array($status,$statuses,true)
+    || !is_string($search) || !mb_check_encoding($search,'UTF-8') || mb_strlen($search)>150 || str_contains($search,"\0") || $page===false) {http_response_code(400);exit('Invalid user filters.');}
+$search=trim($search);$where='1=1';$params=[];
+if ($role!=='all') {$where.=' AND u.role=?';$params[]=$role;}
+if ($status!=='all') {$where.=' AND u.status=?';$params[]=$status;}
+if ($search!=='') {
+    $where.=" AND (u.full_name LIKE ? ESCAPE '!' OR u.email LIKE ? ESCAPE '!' OR o.organization_name LIKE ? ESCAPE '!')";
+    $term='%'.str_replace(['!','%','_'],['!!','!%','!_'],$search).'%';array_push($params,$term,$term,$term);
+}
+try {
+    $from=' FROM users u LEFT JOIN organizations o ON o.user_id=u.id WHERE '.$where;
+    $query=db()->prepare('SELECT COUNT(*)'.$from);$query->execute($params);$total=(int)$query->fetchColumn();$pages=max(1,(int)ceil($total/20));$page=min($page,$pages);$offset=($page-1)*20;
+    $query=db()->prepare('SELECT u.id,u.full_name,u.email,u.phone,u.address,u.role,u.status,u.created_at,o.organization_name'.$from." ORDER BY u.created_at DESC,u.id DESC LIMIT 20 OFFSET $offset");$query->execute($params);$accounts=$query->fetchAll();
+} catch (PDOException $exception) {error_log('User list failed. Code: '.$exception->getCode());http_response_code(503);exit('Registered users are temporarily unavailable. Please try again later.');}
+$message=$_SESSION['access_success']??'';unset($_SESSION['access_success']);
+?>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Registered users | <?= e(APP_NAME) ?></title><link rel="stylesheet" href="<?= e(app_url('assets/css/bootstrap.min.css')) ?>"><link rel="stylesheet" href="<?= e(app_url('assets/css/style.css')) ?>"></head><body>
+<?php $navigationUser=$user;require __DIR__.'/../includes/header.php'; ?><main class="container py-5" id="main-content"><div class="row g-4"><?php $adminPage='users';require __DIR__.'/../includes/admin_sidebar.php'; ?>
+<section class="col-lg-9" aria-labelledby="users-heading"><div class="dashboard-welcome mb-4"><h1 class="h2" id="users-heading">Registered users</h1><p class="text-secondary">Review accounts and manage access for donors, organizations and volunteers. Use Account approvals for pending registrations.</p></div>
+<?php if ($message!==''): ?><div class="alert alert-success" role="status"><?= e($message) ?></div><?php endif; ?>
+<form method="get" class="account-card mb-4"><div class="row g-3"><div class="col-12"><label class="form-label" for="search">Name, email or organization</label><input class="form-control" id="search" name="search" maxlength="150" value="<?= e($search) ?>"></div><div class="col-md-5"><label class="form-label" for="role">Role</label><select class="form-select" id="role" name="role"><?php foreach ($roles as $option): ?><option value="<?= e($option) ?>" <?= $role===$option?'selected':'' ?>><?= e(ucfirst($option)) ?></option><?php endforeach; ?></select></div><div class="col-md-4"><label class="form-label" for="status">Status</label><select class="form-select" id="status" name="status"><?php foreach ($statuses as $option): ?><option value="<?= e($option) ?>" <?= $status===$option?'selected':'' ?>><?= e(ucfirst($option)) ?></option><?php endforeach; ?></select></div><div class="col-md-3 d-flex align-items-end"><button class="btn btn-community w-100">Apply filters</button></div></div></form>
+<div class="dashboard-panel"><div class="dashboard-panel-heading"><h2>User accounts</h2><span><?= e((string)$total) ?> matching users</span></div><?php if (!$accounts): ?><div class="dashboard-empty"><h3>No matching users.</h3><p>Try a different name, role or status.</p></div><?php else: ?><div class="table-responsive"><table class="table dashboard-table align-middle mb-0"><caption class="visually-hidden">Registered accounts and access controls.</caption><thead><tr><th scope="col">Account</th><th scope="col">Role</th><th scope="col">Status</th><th scope="col">Access</th></tr></thead><tbody>
+<?php foreach ($accounts as $account): ?><tr><td><strong><?= e($account['full_name']) ?></strong><div class="small"><?= e($account['email']) ?></div><?php if ($account['organization_name']!==null): ?><div class="small"><?= e($account['organization_name']) ?></div><?php endif; ?><details class="small mt-2"><summary>Contact and registration details</summary><dl class="mt-2 mb-0"><dt>Phone</dt><dd><?= e($account['phone']) ?></dd><dt>Address</dt><dd class="donation-description"><?= e($account['address']) ?></dd><dt>Registered</dt><dd><?= e(dashboard_date($account['created_at'])) ?></dd></dl></details></td><td><?= e(ucfirst($account['role'])) ?></td><td><?= status_badge($account['status']) ?></td><td>
+<?php if ($account['role']!=='admin' && in_array($account['status'],['active','suspended'],true)): ?>
+<form method="post" action="<?= e(app_url('admin/change_access.php?id='.$account['id'])) ?>"><input type="hidden" name="csrf_token" value="<?= e(csrf_token()) ?>"><input type="hidden" name="action" value="<?= $account['status']==='active'?'suspend':'reactivate' ?>"><div class="form-check mb-2"><input class="form-check-input" id="reviewed-<?= e((string)$account['id']) ?>" name="reviewed" value="yes" type="checkbox" required><label class="form-check-label small" for="reviewed-<?= e((string)$account['id']) ?>">I reviewed this account.</label></div><button class="btn btn-sm <?= $account['status']==='active'?'btn-outline-danger':'btn-community' ?>"><?= $account['status']==='active'?'Suspend':'Reactivate' ?></button></form>
+<?php elseif ($account['role']==='admin'): ?><span class="small text-secondary">Administrator access protected</span><?php elseif ($account['status']==='pending' && in_array($account['role'],['organization','volunteer'],true)): ?><a class="home-link" href="<?= e(app_url('admin/accounts.php?role='.$account['role'])) ?>">Review approval &rarr;</a><?php else: ?><span class="small text-secondary">No access change available</span><?php endif; ?>
+</td></tr><?php endforeach; ?></tbody></table></div><?php endif; ?></div>
+<?php if ($pages>1): ?><nav class="donation-pagination mt-4" aria-label="User pages"><?php if ($page>1): ?><a class="btn btn-quiet" href="?<?= e(http_build_query(['role'=>$role,'status'=>$status,'search'=>$search,'page'=>$page-1])) ?>">Previous</a><?php endif; ?><span>Page <?= e((string)$page) ?> of <?= e((string)$pages) ?></span><?php if ($page<$pages): ?><a class="btn btn-quiet" href="?<?= e(http_build_query(['role'=>$role,'status'=>$status,'search'=>$search,'page'=>$page+1])) ?>">Next</a><?php endif; ?></nav><?php endif; ?>
+</section></div></main><?php require __DIR__.'/../includes/footer.php'; ?></body></html>

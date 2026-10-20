@@ -1,0 +1,1244 @@
+Full verification started 2026-10-18T17:40:16+02:00
+
+=== Syntax: admin\accounts.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\admin\accounts.php
+
+=== Syntax: admin\assign_volunteer.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\admin\assign_volunteer.php
+
+=== Syntax: admin\assignments.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\admin\assignments.php
+
+=== Syntax: admin\cancel_donation.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\admin\cancel_donation.php
+
+=== Syntax: admin\change_access.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\admin\change_access.php
+
+=== Syntax: admin\decide_account.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\admin\decide_account.php
+
+=== Syntax: admin\donation.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\admin\donation.php
+
+=== Syntax: admin\donations.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\admin\donations.php
+
+=== Syntax: admin\index.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\admin\index.php
+
+=== Syntax: admin\reassign_volunteer.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\admin\reassign_volunteer.php
+
+=== Syntax: admin\recent.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\admin\recent.php
+
+=== Syntax: admin\reports.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\admin\reports.php
+
+=== Syntax: admin\requests.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\admin\requests.php
+
+=== Syntax: admin\users.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\admin\users.php
+
+=== Syntax: database\create_admin.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\database\create_admin.php
+
+=== Syntax: database\seed_demo.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\database\seed_demo.php
+
+=== Syntax: donor\add_donation.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\donor\add_donation.php
+
+=== Syntax: donor\cancel_donation.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\donor\cancel_donation.php
+
+=== Syntax: donor\decide_request.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\donor\decide_request.php
+
+=== Syntax: donor\donation.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\donor\donation.php
+
+=== Syntax: donor\donations.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\donor\donations.php
+
+=== Syntax: donor\edit_donation.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\donor\edit_donation.php
+
+=== Syntax: donor\index.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\donor\index.php
+
+=== Syntax: donor\profile.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\donor\profile.php
+
+=== Syntax: donor\request.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\donor\request.php
+
+=== Syntax: donor\requests.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\donor\requests.php
+
+=== Syntax: includes\admin_accounts.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\admin_accounts.php
+
+=== Syntax: includes\admin_records.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\admin_records.php
+
+=== Syntax: includes\admin_reports.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\admin_reports.php
+
+=== Syntax: includes\admin_setup.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\admin_setup.php
+
+=== Syntax: includes\admin_sidebar.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\admin_sidebar.php
+
+=== Syntax: includes\admin_workflow.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\admin_workflow.php
+
+=== Syntax: includes\auth.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\auth.php
+
+=== Syntax: includes\config.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\config.php
+
+=== Syntax: includes\dashboard.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\dashboard.php
+
+=== Syntax: includes\db.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\db.php
+
+=== Syntax: includes\demo_setup.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\demo_setup.php
+
+=== Syntax: includes\donation_form.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\donation_form.php
+
+=== Syntax: includes\donor_donations.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\donor_donations.php
+
+=== Syntax: includes\donor_requests.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\donor_requests.php
+
+=== Syntax: includes\donor_sidebar.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\donor_sidebar.php
+
+=== Syntax: includes\footer.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\footer.php
+
+=== Syntax: includes\header.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\header.php
+
+=== Syntax: includes\organization_donations.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\organization_donations.php
+
+=== Syntax: includes\organization_requests.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\organization_requests.php
+
+=== Syntax: includes\organization_sidebar.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\organization_sidebar.php
+
+=== Syntax: includes\profile.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\profile.php
+
+=== Syntax: includes\profile_page.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\profile_page.php
+
+=== Syntax: includes\role_home.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\role_home.php
+
+=== Syntax: includes\security.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\security.php
+
+=== Syntax: includes\volunteer_sidebar.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\volunteer_sidebar.php
+
+=== Syntax: includes\volunteer_tasks.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\includes\volunteer_tasks.php
+
+=== Syntax: index.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\index.php
+
+=== Syntax: login.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\login.php
+
+=== Syntax: logout.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\logout.php
+
+=== Syntax: organization\confirm_receipt.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\organization\confirm_receipt.php
+
+=== Syntax: organization\donation.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\organization\donation.php
+
+=== Syntax: organization\donations.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\organization\donations.php
+
+=== Syntax: organization\index.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\organization\index.php
+
+=== Syntax: organization\profile.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\organization\profile.php
+
+=== Syntax: organization\request.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\organization\request.php
+
+=== Syntax: organization\request_donation.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\organization\request_donation.php
+
+=== Syntax: organization\requests.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\organization\requests.php
+
+=== Syntax: register.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\register.php
+
+=== Syntax: tests\account_approvals.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\account_approvals.php
+
+=== Syntax: tests\admin_overview.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\admin_overview.php
+
+=== Syntax: tests\admin_reports.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\admin_reports.php
+
+=== Syntax: tests\admin_setup.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\admin_setup.php
+
+=== Syntax: tests\admin_workflow.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\admin_workflow.php
+
+=== Syntax: tests\auth.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\auth.php
+
+=== Syntax: tests\dashboards.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\dashboards.php
+
+=== Syntax: tests\demo_setup.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\demo_setup.php
+
+=== Syntax: tests\donation_creation.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\donation_creation.php
+
+=== Syntax: tests\donation_management.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\donation_management.php
+
+=== Syntax: tests\donor_requests.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\donor_requests.php
+
+=== Syntax: tests\organization_profile.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\organization_profile.php
+
+=== Syntax: tests\organization_requests.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\organization_requests.php
+
+=== Syntax: tests\organization_tracking.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\organization_tracking.php
+
+=== Syntax: tests\profile.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\profile.php
+
+=== Syntax: tests\receipt_confirmation.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\receipt_confirmation.php
+
+=== Syntax: tests\registration.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\registration.php
+
+=== Syntax: tests\run_all.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\run_all.php
+
+=== Syntax: tests\user_management.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\user_management.php
+
+=== Syntax: tests\volunteer_profile.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\volunteer_profile.php
+
+=== Syntax: tests\volunteer_tasks.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\volunteer_tasks.php
+
+=== Syntax: tests\volunteer_workflow.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\tests\volunteer_workflow.php
+
+=== Syntax: volunteer\history.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\volunteer\history.php
+
+=== Syntax: volunteer\index.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\volunteer\index.php
+
+=== Syntax: volunteer\profile.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\volunteer\profile.php
+
+=== Syntax: volunteer\recent.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\volunteer\recent.php
+
+=== Syntax: volunteer\task.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\volunteer\task.php
+
+=== Syntax: volunteer\tasks.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\volunteer\tasks.php
+
+=== Syntax: volunteer\update_task.php ===
+No syntax errors detected in C:\xampp\htdocs\Community Food Donation System\volunteer\update_task.php
+
+=== registration ===
+PASS: registration page loads
+PASS: session cookie uses HttpOnly and SameSite
+PASS: form response is not cached
+PASS: admin is absent from public roles
+PASS: missing CSRF rejected
+PASS: forged CSRF rejected
+PASS: array CSRF rejected
+PASS: token from another session rejected
+PASS: forged admin role rejected
+PASS: array full name rejected
+PASS: invalid email rejected
+PASS: invalid phone rejected
+PASS: short password rejected
+PASS: mismatched passwords rejected
+PASS: overlong password rejected
+PASS: password null byte rejected
+PASS: missing organization name rejected
+PASS: overlong full name rejected
+PASS: redisplayed user input escaped
+PASS: password not redisplayed
+PASS: rejected forms created no account
+PASS: donor registration redirects
+PASS: donor account has correct role and approval status
+PASS: donor password stored as a verifiable hash
+PASS: donor organization profile is correct
+PASS: donor success confirmation displayed
+PASS: CSRF token rotated after successful registration
+PASS: duplicate donor email rejected
+PASS: duplicate submission did not create another user
+PASS: organization registration redirects
+PASS: organization account has correct role and approval status
+PASS: organization password stored as a verifiable hash
+PASS: organization organization profile is correct
+PASS: organization success confirmation displayed
+PASS: CSRF token rotated after successful registration
+PASS: duplicate organization email rejected
+PASS: duplicate submission did not create another user
+PASS: volunteer registration redirects
+PASS: volunteer account has correct role and approval status
+PASS: volunteer password stored as a verifiable hash
+PASS: volunteer organization profile is correct
+PASS: volunteer success confirmation displayed
+PASS: CSRF token rotated after successful registration
+PASS: duplicate volunteer email rejected
+PASS: duplicate submission did not create another user
+Test accounts cleaned up.
+
+=== admin_setup ===
+PASS: invalid email rejected
+PASS: invalid phone rejected
+PASS: invalid full_name rejected
+PASS: invalid address rejected
+PASS: invalid password rejected
+PASS: invalid password rejected
+PASS: invalid password rejected
+PASS: existing donor email cannot be promoted
+PASS: existing donor unchanged
+PASS: active administrator created
+PASS: administrator password hashed
+PASS: second administrator setup refused
+PASS: suspended administrator cannot be replaced by setup
+PASS: exactly one administrator remains
+PASS: transactions closed after rejected setup
+Temporary table removed; real accounts were not modified.
+
+=== auth ===
+PASS: guest blocked from donor
+PASS: guest blocked from organization
+PASS: guest blocked from volunteer
+PASS: guest blocked from admin
+PASS: GET logout rejected
+PASS: login without CSRF rejected
+PASS: malformed login fields rejected
+PASS: wrong password rejected
+PASS: unknown email uses same error
+PASS: pending-org cannot sign in
+PASS: pending-org has no authenticated session
+PASS: pending-volunteer cannot sign in
+PASS: pending-volunteer has no authenticated session
+PASS: suspended cannot sign in
+PASS: suspended has no authenticated session
+PASS: rejected cannot sign in
+PASS: rejected has no authenticated session
+PASS: donor routed using stored role
+PASS: donor session ID regenerated
+PASS: donor old session ID cannot access dashboard
+PASS: donor access to donor
+PASS: dashboard name escaped
+PASS: donor access to organization
+PASS: donor access to volunteer
+PASS: donor access to admin
+PASS: signed-in donor skips login
+PASS: signed-in donor skips registration
+PASS: old CSRF token cannot log out donor
+PASS: failed logout preserves donor session
+PASS: donor logout succeeds
+PASS: donor dashboard blocked after logout
+PASS: donor destroyed session cannot be replayed
+PASS: organization routed using stored role
+PASS: organization session ID regenerated
+PASS: organization old session ID cannot access dashboard
+PASS: organization access to donor
+PASS: organization access to organization
+PASS: dashboard name escaped
+PASS: organization access to volunteer
+PASS: organization access to admin
+PASS: signed-in organization skips login
+PASS: signed-in organization skips registration
+PASS: old CSRF token cannot log out organization
+PASS: failed logout preserves organization session
+PASS: organization logout succeeds
+PASS: organization dashboard blocked after logout
+PASS: organization destroyed session cannot be replayed
+PASS: volunteer routed using stored role
+PASS: volunteer session ID regenerated
+PASS: volunteer old session ID cannot access dashboard
+PASS: volunteer access to donor
+PASS: volunteer access to organization
+PASS: volunteer access to volunteer
+PASS: dashboard name escaped
+PASS: volunteer access to admin
+PASS: signed-in volunteer skips login
+PASS: signed-in volunteer skips registration
+PASS: old CSRF token cannot log out volunteer
+PASS: failed logout preserves volunteer session
+PASS: volunteer logout succeeds
+PASS: volunteer dashboard blocked after logout
+PASS: volunteer destroyed session cannot be replayed
+PASS: admin routed using stored role
+PASS: admin session ID regenerated
+PASS: admin old session ID cannot access dashboard
+PASS: admin access to donor
+PASS: admin access to organization
+PASS: admin access to volunteer
+PASS: admin access to admin
+PASS: dashboard name escaped
+PASS: signed-in admin skips login
+PASS: signed-in admin skips registration
+PASS: old CSRF token cannot log out admin
+PASS: failed logout preserves admin session
+PASS: admin logout succeeds
+PASS: admin dashboard blocked after logout
+PASS: admin destroyed session cannot be replayed
+PASS: role change immediately blocks previous role
+PASS: current database role used
+PASS: suspension revokes existing session
+PASS: new login form works after revocation
+PASS: failed attempt 1 counted
+PASS: failed attempt 2 counted
+PASS: failed attempt 3 counted
+PASS: failed attempt 4 counted
+PASS: failed attempt 5 counted
+PASS: session login cooldown enforced
+Temporary auth accounts cleaned up.
+
+=== dashboards ===
+PASS: donor-a scoped statistics
+PASS: donor-a scoped record count
+PASS: donor-a cannot see unrelated collection
+PASS: overdue food displayed as expired
+PASS: dashboard read does not alter workflow records
+PASS: donor-b scoped statistics
+PASS: donor-b scoped record count
+PASS: org-a scoped statistics
+PASS: org-a scoped record count
+PASS: org-a cannot see unrelated collection
+PASS: org-b scoped statistics
+PASS: org-b scoped record count
+PASS: vol-a scoped statistics
+PASS: vol-a scoped record count
+PASS: vol-a cannot see unrelated collection
+PASS: vol-b scoped statistics
+PASS: vol-b scoped record count
+PASS: admin system totals
+PASS: admin pending approval count
+PASS: recent lists bounded to five records
+PASS: unknown status safely labelled
+All dashboard fixtures rolled back.
+
+=== donation_creation ===
+PASS: guests redirected from form
+PASS: fixture account signed in
+PASS: other roles denied creation
+PASS: fixture account signed in
+PASS: donor form loads
+PASS: invalid CSRF rejected
+PASS: zero quantity rejected
+PASS: negative quantity rejected
+PASS: excess precision rejected
+PASS: quantity overflow rejected
+PASS: unknown category rejected
+PASS: unknown unit rejected
+PASS: missing name rejected
+PASS: array field rejected
+PASS: short description rejected
+PASS: past deadline rejected
+PASS: invalid calendar date rejected
+PASS: deadline before start rejected
+PASS: PHP file rejected
+PASS: fake JPEG rejected
+PASS: executable filename rejected
+PASS: oversized upload rejected
+PASS: oversized dimensions rejected
+PASS: rejected forms create no donations
+PASS: plain donation saved and redirected
+PASS: server controls donor and initial status; image optional
+PASS: success and recent donation shown
+PASS: successful form token cannot create duplicate
+PASS: real PNG upload accepted
+PASS: random JPEG filename stored
+PASS: image re-encoded and appended content stripped
+PASS: safe uploaded JPEG served correctly
+PASS: upload configuration protected
+PASS: homepage shows image and escaped food name
+PASS: public preview omits pickup address
+Only test accounts, donations, and test images cleaned up.
+
+=== donation_management ===
+PASS: guest cannot list donations
+PASS: fixture login
+PASS: organization denied donor pages
+PASS: fixture login
+PASS: fixture login
+PASS: list ignores forged donor filter
+PASS: list paginated at twenty
+PASS: second page includes remaining history
+PASS: completed history filtered
+PASS: Completed history tab is selected
+PASS: My donations tab is not selected for completed history
+PASS: search treats percent and underscore literally
+PASS: invalid filters rejected
+PASS: owned detail and photo escaped
+PASS: other donor cannot access donation.php
+PASS: other donor cannot access edit_donation.php
+PASS: bad or missing donation rejected
+PASS: bad or missing donation rejected
+PASS: bad or missing donation rejected
+PASS: bad or missing donation rejected
+PASS: eligible edit form loads
+PASS: edit CSRF enforced
+PASS: edit values validated
+PASS: eligible edit saved
+PASS: edit preserves owner/status/existing photo
+PASS: eligible edit form loads
+PASS: stale edit rejected
+PASS: eligible edit form loads
+PASS: replacement saved and previous photo removed
+PASS: eligible edit form loads
+PASS: explicit photo removal saved
+PASS: pending cannot be edited
+PASS: approved cannot be edited
+PASS: assigned cannot be edited
+PASS: collected cannot be edited
+PASS: delivered cannot be edited
+PASS: completed cannot be edited
+PASS: cancelled cannot be edited
+PASS: expired cannot be edited
+PASS: requested-history cannot be edited
+PASS: GET cannot cancel
+PASS: cancel CSRF enforced
+PASS: cancellation confirmation required
+PASS: other donor cannot cancel
+PASS: available donation cancelled with history retained
+PASS: donation and pending request cancelled atomically
+PASS: approved cannot be cancelled
+PASS: assigned cannot be cancelled
+PASS: collected cannot be cancelled
+PASS: delivered cannot be cancelled
+PASS: completed cannot be cancelled
+PASS: cancelled cannot be cancelled
+PASS: expired cannot be cancelled
+Management fixtures and test images cleaned up.
+
+=== profile ===
+PASS: guest redirected
+PASS: organization fixture login
+PASS: other role denied
+PASS: donor fixture login
+PASS: profile form loads
+PASS: CSRF enforced
+PASS: invalid name rejected
+PASS: invalid array rejected
+PASS: invalid email rejected
+PASS: invalid phone rejected
+PASS: invalid address rejected
+PASS: contact details saved
+PASS: role/status/password cannot be changed by form
+PASS: another account cannot be edited
+PASS: success and escaped profile values displayed
+PASS: dashboard uses updated name
+PASS: new donation uses updated default address
+PASS: existing donation pickup unchanged
+PASS: profile form loads
+PASS: stale profile changes rejected
+PASS: profile form loads
+PASS: email change requires password
+PASS: incorrect password blocks email change
+PASS: malformed password rejected
+PASS: duplicate email rejected
+PASS: rejected email changes leave account intact
+PASS: verified email change normalized and saved
+PASS: new-email confirmation without password echo
+PASS: profile update did not create another account
+PASS: old email no longer signs in
+PASS: new email signs in with original password
+Temporary profile accounts and donation removed.
+
+=== donor_requests ===
+PASS: guest list blocked
+PASS: fixture login
+PASS: organization cannot use donor requests
+PASS: fixture login
+PASS: fixture login
+PASS: request list scoped to donation owner
+PASS: organization names escaped
+PASS: invalid status filter rejected
+PASS: donation filter scopes list
+PASS: owned request details escaped
+PASS: other donor cannot view request
+PASS: GET cannot decide
+PASS: decision CSRF enforced
+PASS: unknown decision rejected
+PASS: other donor cannot decide
+PASS: approval and rejection of competitors committed together
+PASS: approved donation awaits assignment
+PASS: decision timestamp stored
+PASS: second allocation blocked
+PASS: approved decision cannot be reversed
+PASS: one rejection preserves other pending request
+PASS: last rejection returns donation to available
+PASS: inactive organization cannot be approved
+PASS: inactive organization request may be rejected
+PASS: expired blocks approve
+PASS: expired blocks reject
+PASS: blocked decision leaves expired request unchanged
+PASS: cancelled blocks approve
+PASS: cancelled blocks reject
+PASS: blocked decision leaves cancelled request unchanged
+PASS: assigned blocks approve
+PASS: assigned blocks reject
+PASS: blocked decision leaves assigned request unchanged
+PASS: collected blocks approve
+PASS: collected blocks reject
+PASS: blocked decision leaves collected request unchanged
+PASS: delivered blocks approve
+PASS: delivered blocks reject
+PASS: blocked decision leaves delivered request unchanged
+PASS: completed blocks approve
+PASS: completed blocks reject
+PASS: blocked decision leaves completed request unchanged
+PASS: concurrent worker completed: 
+PASS: concurrent worker completed: 
+PASS: competing approvals produce exactly one winner
+PASS: exactly one approved request after concurrency test
+Request fixtures removed; existing accounts/history preserved.
+
+=== organization_requests ===
+PASS: guest browse blocked
+PASS: donor fixture login
+PASS: donor cannot use organization pages
+PASS: pending organization cannot sign in
+PASS: org-a fixture login
+PASS: org-b fixture login
+PASS: org-c fixture login
+PASS: browse includes available and unallocated requested food
+PASS: expired excluded from browse
+PASS: future excluded from browse
+PASS: cancelled excluded from browse
+PASS: assigned excluded from browse
+PASS: collected excluded from browse
+PASS: delivered excluded from browse
+PASS: completed excluded from browse
+PASS: allocated excluded from browse
+PASS: inactive excluded from browse
+PASS: food results paginate
+PASS: category and pickup filters combined
+PASS: browse food names escaped
+PASS: invalid browse filter rejected
+PASS: unrelated organization cannot view allocated food
+PASS: recipient can still view allocated food
+PASS: eligible donation detail loads
+PASS: GET cannot submit request
+PASS: request CSRF enforced
+PASS: invalid short address rejected with form error
+PASS: invalid array address rejected with form error
+PASS: invalid overlong message rejected with form error
+PASS: organization request submitted
+PASS: server controls requesting organization and status
+PASS: donation and request state updated together
+PASS: old successful token cannot replay
+PASS: own message and food description escaped
+PASS: duplicate organization request blocked
+PASS: eligible donation detail loads
+PASS: another organization may request unallocated food
+PASS: donor sees organization requests end to end
+PASS: donor approves actual submitted request
+PASS: approved organization sees decision and contact
+PASS: competing organization sees rejection without recipient contact
+PASS: unrelated organization cannot view new allocation
+PASS: expired blocks direct submission
+PASS: future blocks direct submission
+PASS: cancelled blocks direct submission
+PASS: assigned blocks direct submission
+PASS: collected blocks direct submission
+PASS: delivered blocks direct submission
+PASS: completed blocks direct submission
+PASS: allocated blocks direct submission
+PASS: inactive blocks direct submission
+PASS: dashboard links to own requested donation
+Only organization test fixtures removed.
+
+=== organization_tracking ===
+PASS: guest history blocked
+PASS: fixture login
+PASS: other role history blocked
+PASS: fixture login
+PASS: fixture login
+PASS: history paginated at twenty
+PASS: second page reachable
+PASS: invalid request filter rejected
+PASS: invalid delivery filter rejected
+PASS: completed history includes only donations received by this organization
+PASS: organization Completed history highlighted
+PASS: My requests not highlighted on completed history
+PASS: request-status filter works
+PASS: overdue task filter uses effective expired status
+PASS: food-name search works
+PASS: forged organization parameter cannot access another request
+PASS: other organization cannot view tracking
+PASS: non-approved pending request has no collection contacts
+PASS: non-approved rejected request has no collection contacts
+PASS: non-approved cancelled request has no collection contacts
+PASS: approval alone does not imply assignment or delivery
+PASS: assigned timeline uses recorded timestamps
+PASS: own volunteer and delivery details shown
+PASS: tracking text escaped
+PASS: collected timeline uses recorded timestamps
+PASS: own volunteer and delivery details shown
+PASS: tracking text escaped
+PASS: delivered timeline uses recorded timestamps
+PASS: own volunteer and delivery details shown
+PASS: tracking text escaped
+PASS: completed timeline uses recorded timestamps
+PASS: own volunteer and delivery details shown
+PASS: tracking text escaped
+PASS: rejected competitor cannot see winning collection contact
+PASS: expired tracking explains closed progress
+PASS: tracking GET does not mutate workflow status
+PASS: dashboard links to tracking and history
+Only tracking test records removed.
+
+=== receipt_confirmation ===
+PASS: guest cannot confirm
+PASS: fixture login
+PASS: other role cannot confirm
+PASS: fixture login
+PASS: fixture login
+PASS: GET cannot confirm
+PASS: delivered request offers confirmation
+PASS: missing CSRF rejected
+PASS: forged CSRF rejected
+PASS: explicit receipt acknowledgement required
+PASS: foreign organization cannot confirm through forged identity
+PASS: rejected actions leave donation unchanged
+PASS: no receipt form for assigned
+PASS: invalid assigned transition rejected without mutation
+PASS: no receipt form for collected
+PASS: invalid collected transition rejected without mutation
+PASS: no receipt form for cancelled
+PASS: invalid cancelled transition rejected without mutation
+PASS: no receipt form for expired
+PASS: invalid expired transition rejected without mutation
+PASS: no receipt form for pending
+PASS: invalid pending transition rejected without mutation
+PASS: no receipt form for rejected
+PASS: invalid rejected transition rejected without mutation
+PASS: no receipt form for missing-task
+PASS: invalid missing-task transition rejected without mutation
+PASS: no receipt form for missing-time
+PASS: invalid missing-time transition rejected without mutation
+PASS: no receipt form for cancelled-task
+PASS: invalid cancelled-task transition rejected without mutation
+PASS: service rejects suspended organization
+PASS: valid confirmation redirects to owned request
+PASS: completion timestamp recorded by server even after pickup deadline
+PASS: completed detail shows success and all recorded steps
+PASS: completed donation enters recipient history
+PASS: old confirmation token rotated
+PASS: repeated confirmation cannot overwrite completion
+PASS: volunteer delivery record preserved
+Only receipt test fixtures removed.
+
+=== organization_profile ===
+PASS: guest blocked
+PASS: donor login
+PASS: donor blocked from organization form
+PASS: missing-profile login
+PASS: missing linked profile handled
+PASS: organization login
+PASS: organization form loads
+PASS: CSRF enforced
+PASS: invalid organization_name rejected
+PASS: invalid description rejected
+PASS: invalid phone rejected
+PASS: invalid address rejected
+PASS: invalid email rejected
+PASS: malformed organization text rejected
+PASS: malformed organization text rejected
+PASS: contact and organization saved together
+PASS: forged identity/role/status/password ignored
+PASS: saved fields escaped with success message
+PASS: profile tab highlighted
+PASS: dashboard reflects organization name and profile link
+PASS: recorded request address preserved
+PASS: organization form loads
+PASS: stale contact/organization snapshot rejected
+PASS: organization form loads
+PASS: organization-only concurrent edit protected
+PASS: organization form loads
+PASS: email change requires password before either table changes
+PASS: wrong current password rejected
+PASS: duplicate email rolls back all profile fields
+PASS: verified email normalized and optional description cleared
+PASS: new email signs in with existing password
+Only organization profile fixtures removed.
+
+=== account_approvals ===
+PASS: guest cannot review registrations
+PASS: pending organization cannot sign in
+PASS: donor fixture login
+PASS: donor cannot review registrations
+PASS: donor cannot approve
+PASS: admin fixture login
+PASS: dashboard links to account approvals
+PASS: pending organization listed
+PASS: registration details escaped
+PASS: only eligible pending roles listed
+PASS: organization filter works
+PASS: invalid role filter rejected
+PASS: GET cannot approve
+PASS: CSRF enforced
+PASS: explicit review required
+PASS: invalid decision rejected
+PASS: invalid missing approval blocked
+PASS: invalid donor approval blocked
+PASS: invalid pending-donor approval blocked
+PASS: invalid active-org approval blocked
+PASS: invalid admin approval blocked
+PASS: organization approved
+PASS: approval preserves identity, role and password
+PASS: approved organization can sign in
+PASS: approved organization can use its module
+PASS: approval success displayed
+PASS: repeat approval rejected
+PASS: registration rejection saved
+PASS: rejected organization cannot sign in
+PASS: volunteer approved
+PASS: approved volunteer can sign in
+PASS: service rejects inactive administrator
+Only account approval fixtures removed.
+
+=== volunteer_tasks ===
+PASS: guest task list blocked
+PASS: fixture login
+PASS: donor cannot view volunteer tasks
+PASS: fixture login
+PASS: fixture login
+PASS: fixture login
+PASS: task list paginated at twenty
+PASS: second task page reachable
+PASS: task-status filter works
+PASS: forged volunteer identity cannot expose foreign tasks
+PASS: search treats SQL wildcard literally
+PASS: invalid task filter rejected
+PASS: invalid task filter rejected
+PASS: invalid task filter rejected
+PASS: invalid task filter rejected
+PASS: foreign task detail protected
+PASS: assigned volunteer sees pickup and recipient information
+PASS: task content escaped
+PASS: assigned progress uses recorded timestamps
+PASS: collected progress uses recorded timestamps
+PASS: delivered progress uses recorded timestamps
+PASS: completed progress uses recorded timestamps
+PASS: closed task warning and contact privacy
+PASS: closed task warning and contact privacy
+PASS: GET does not mutate expired donation
+PASS: volunteer dashboard links to tasks
+PASS: dashboard recent tasks opens a page instead of a local anchor
+PASS: recent page displays latest five tasks
+PASS: Recent collection tasks tab visibly selected alone
+PASS: recent page shows only signed-in volunteer tasks
+PASS: guest recent tasks blocked
+PASS: guest history blocked
+PASS: wrong role history blocked
+PASS: history contains only delivered collections
+PASS: history tab highlighted without tasks tab
+PASS: confirmed receipt history filter
+PASS: awaiting receipt history filter
+PASS: history cannot be switched to another volunteer
+PASS: invalid receipt filter rejected
+PASS: history food search
+PASS: completed detail selects history tab
+PASS: volunteer cannot assign collections
+PASS: admin list shows eligible approved donations only
+PASS: pending volunteers excluded from choices
+PASS: GET cannot assign
+PASS: assignment CSRF enforced
+PASS: malformed volunteer rejected
+PASS: invalid blocked assignee rejected
+PASS: invalid donor assignee rejected
+PASS: invalid admin assignee rejected
+PASS: ineligible pending assignment rejected
+PASS: ineligible expired assignment rejected
+PASS: ineligible future assignment rejected
+PASS: ineligible cancelled assignment rejected
+PASS: ineligible assigned assignment rejected
+PASS: inactive recipient blocks assignment without mutation
+PASS: assignment creates task and changes donation atomically
+PASS: assignment ownership/status server-controlled
+PASS: new collection visible to selected volunteer
+PASS: new collection hidden from other volunteer
+PASS: repeat assignment rejected
+PASS: wrong role cannot view organization tracking
+Only volunteer test fixtures removed.
+
+=== volunteer_workflow ===
+PASS: request, donor approval and administrator assignment integrated
+PASS: guest updates blocked
+PASS: fixture login
+PASS: wrong role updates blocked
+PASS: fixture login
+PASS: fixture login
+PASS: fixture login
+PASS: fixture login
+PASS: donor/donation.php?id=1195 reflects assigned
+PASS: organization/request.php?id=834 reflects assigned
+PASS: volunteer/task.php?id=380 reflects assigned
+PASS: admin/donation.php?id=1195 reflects assigned
+PASS: all participant dashboards load during assigned
+PASS: donor and recipient receipt totals agree during assigned
+PASS: organization in-progress count follows assigned
+PASS: volunteer counters follow assigned
+PASS: cross-role reads preserve workflow at assigned
+PASS: allocated food leaves organization browsing
+PASS: allocated food leaves public food preview
+PASS: assigned page offers acceptance only
+PASS: GET cannot update tasks
+PASS: CSRF enforced
+PASS: explicit update acknowledgement required
+PASS: invalid action rejected
+PASS: invalid action rejected
+PASS: cannot skip to collect
+PASS: cannot skip to deliver
+PASS: another volunteer cannot update through forged identity
+PASS: expired acceptance blocked without mutation
+PASS: future acceptance blocked without mutation
+PASS: cancelled acceptance blocked without mutation
+PASS: rejected acceptance blocked without mutation
+PASS: cancelled-task acceptance blocked without mutation
+PASS: inactive volunteer rejected by service
+PASS: acceptance records task only and redirects
+PASS: timestamp and ownership server-controlled
+PASS: successful update rotates old CSRF token
+PASS: accepted page offers collection and success
+PASS: donor/donation.php?id=1195 reflects assigned
+PASS: organization/request.php?id=834 reflects assigned
+PASS: volunteer/task.php?id=380 reflects assigned
+PASS: admin/donation.php?id=1195 reflects assigned
+PASS: all participant dashboards load during assigned
+PASS: donor and recipient receipt totals agree during assigned
+PASS: organization in-progress count follows assigned
+PASS: volunteer counters follow accepted
+PASS: cross-role reads preserve workflow at assigned
+PASS: repeated acceptance preserves first timestamp
+PASS: collection after pickup deadline blocked
+PASS: collection updates task and donation together
+PASS: donor/donation.php?id=1195 reflects collected
+PASS: organization/request.php?id=834 reflects collected
+PASS: volunteer/task.php?id=380 reflects collected
+PASS: admin/donation.php?id=1195 reflects collected
+PASS: all participant dashboards load during collected
+PASS: donor and recipient receipt totals agree during collected
+PASS: organization in-progress count follows collected
+PASS: volunteer counters follow collected
+PASS: cross-role reads preserve workflow at collected
+PASS: collected page offers delivery
+PASS: repeated collection preserves timestamps
+PASS: delivery after collection works beyond pickup deadline without completing receipt
+PASS: donor/donation.php?id=1195 reflects delivered
+PASS: organization/request.php?id=834 reflects delivered
+PASS: volunteer/task.php?id=380 reflects delivered
+PASS: admin/donation.php?id=1195 reflects delivered
+PASS: all participant dashboards load during delivered
+PASS: donor and recipient receipt totals agree during delivered
+PASS: organization in-progress count follows delivered
+PASS: volunteer counters follow delivered
+PASS: cross-role reads preserve workflow at delivered
+PASS: delivered page awaits organization receipt
+PASS: repeated delivery preserves timestamps
+PASS: organization sees delivered donation ready for confirmation
+PASS: organization receipt completes integrated workflow
+PASS: completed donation cannot be reopened by volunteer
+PASS: completed volunteer timeline includes receipt
+PASS: donor/donation.php?id=1195 reflects completed
+PASS: organization/request.php?id=834 reflects completed
+PASS: volunteer/task.php?id=380 reflects completed
+PASS: admin/donation.php?id=1195 reflects completed
+PASS: all participant dashboards load during completed
+PASS: donor and recipient receipt totals agree during completed
+PASS: organization in-progress count follows completed
+PASS: volunteer counters follow delivered
+PASS: cross-role reads preserve workflow at completed
+PASS: completed donor detail keeps Completed history selected
+PASS: completed food appears in donor/donations.php?status=completed
+PASS: completed food appears in organization/requests.php?delivery=completed
+PASS: completed food appears in volunteer/history.php
+PASS: volunteer dashboard uses latest receipt update rather than old task time
+Only volunteer workflow fixtures removed.
+
+=== volunteer_profile ===
+PASS: guest blocked
+PASS: donor login
+PASS: donor cannot edit volunteer profile
+PASS: volunteer login
+PASS: volunteer profile loads
+PASS: CSRF enforced
+PASS: invalid full_name rejected
+PASS: invalid phone rejected
+PASS: invalid address rejected
+PASS: invalid email rejected
+PASS: contact fields saved
+PASS: identity, permissions and password protected
+PASS: success, escaping and volunteer address guidance
+PASS: profile tab highlighted
+PASS: dashboard reflects profile and history links
+PASS: volunteer profile loads
+PASS: stale edits rejected
+PASS: volunteer profile loads
+PASS: email change requires password
+PASS: wrong password blocks email change
+PASS: duplicate email rejected
+PASS: verified email normalized and saved
+PASS: new email signs in with unchanged password
+Only volunteer profile fixtures removed.
+
+=== user_management ===
+PASS: guest list blocked
+PASS: donor login
+PASS: other role list blocked
+PASS: other role access changes blocked
+PASS: admin login
+PASS: dashboard has user management link
+PASS: filtered list paginated at twenty
+PASS: Registered users tab highlighted
+PASS: details escaped without password hashes
+PASS: second page shows remaining users
+PASS: combined filters and pending approval link
+PASS: organization name search works
+PASS: wildcards treated literally
+PASS: invalid list filter rejected
+PASS: invalid list filter rejected
+PASS: invalid list filter rejected
+PASS: invalid list filter rejected
+PASS: GET cannot change access
+PASS: CSRF enforced
+PASS: explicit review required
+PASS: invalid access action rejected
+PASS: invalid access action rejected
+PASS: invalid access action rejected
+PASS: protected admin state rejected
+PASS: protected other-admin state rejected
+PASS: protected pending state rejected
+PASS: protected rejected state rejected
+PASS: missing account returns not found
+PASS: organization without profile cannot reactivate
+PASS: donor suspension saved and redirects
+PASS: suspension preserves identity, role and password
+PASS: existing suspended session loses protected access
+PASS: suspended account cannot sign in
+PASS: suspension message and correct next action
+PASS: duplicate suspension rejected without mutation
+PASS: suspended donor reactivated
+PASS: session cleared during suspension stays signed out
+PASS: reactivated donor signs in with original password
+PASS: duplicate reactivation rejected
+PASS: org suspension supported
+PASS: org reactivation supported
+PASS: volunteer suspension supported
+PASS: volunteer reactivation supported
+PASS: inactive administrator rejected by service
+Only user management fixtures removed.
+
+=== admin_overview ===
+PASS: guest overview blocked
+PASS: guest overview blocked
+PASS: guest overview blocked
+PASS: fixture login
+PASS: donor cannot access administrator overview
+PASS: donor cannot access administrator overview
+PASS: donor cannot access administrator overview
+PASS: fixture login
+PASS: org cannot access administrator overview
+PASS: org cannot access administrator overview
+PASS: org cannot access administrator overview
+PASS: fixture login
+PASS: volunteer cannot access administrator overview
+PASS: volunteer cannot access administrator overview
+PASS: volunteer cannot access administrator overview
+PASS: fixture login
+PASS: donation overview paginated without duplicated request rows
+PASS: second donation page reachable
+PASS: request overview paginated
+PASS: second request page reachable
+PASS: effective expiry filter
+PASS: combined request/donation filters and detail anchor
+PASS: organization search includes competing request
+PASS: administrator sees other donor records
+PASS: literal wildcard search
+PASS: invalid overview filter rejected
+PASS: invalid overview filter rejected
+PASS: invalid overview filter rejected
+PASS: invalid overview filter rejected
+PASS: missing donation returns not found
+PASS: detail includes all competing requests
+PASS: detail escaped and excludes password hashes
+PASS: admin sees donor, delivery and volunteer information
+PASS: completed tracking has six recorded steps without competitor receipt
+PASS: assigned tracking never infers collection/delivery
+PASS: pending request explains decision state
+PASS: unrequested donation empty state
+PASS: overview reads do not mutate expired state
+PASS: dashboard links to overview pages
+PASS: admin Recent donations opens a page
+PASS: admin Pending accounts opens approvals
+PASS: recent donations shows latest five matches
+PASS: Recent donations selected without All donations
+PASS: Pending accounts page loads and highlights matching menu
+PASS: guest recent donations blocked
+Only overview test fixtures removed.
+
+=== admin_reports ===
+PASS: invalid date range rejected
+PASS: invalid date range rejected
+PASS: invalid date range rejected
+PASS: invalid date range rejected
+PASS: invalid date range rejected
+PASS: inclusive end date translated to exclusive next midnight
+PASS: users counted by its own event timestamp
+PASS: donations counted by its own event timestamp
+PASS: requests counted by its own event timestamp
+PASS: assignments counted by its own event timestamp
+PASS: deliveries counted by its own event timestamp
+PASS: receipts counted by its own event timestamp
+PASS: donations breakdown completed
+PASS: donations breakdown expired
+PASS: donations breakdown requested
+PASS: donations breakdown reconciles with total
+PASS: requests breakdown approved
+PASS: requests breakdown rejected
+PASS: requests breakdown pending
+PASS: requests breakdown reconciles with total
+PASS: tasks breakdown delivered
+PASS: tasks breakdown reconciles with total
+PASS: users breakdown donor
+PASS: users breakdown organization
+PASS: users breakdown reconciles with total
+PASS: receipt quantities kept separate by unit and completion date
+PASS: all-time users includes fixtures outside date range
+PASS: all-time donations includes fixtures outside date range
+PASS: all-time requests includes fixtures outside date range
+PASS: all-time assignments includes fixtures outside date range
+PASS: all-time deliveries includes fixtures outside date range
+PASS: all-time receipts includes fixtures outside date range
+PASS: guest reports blocked
+PASS: fixture login
+PASS: donor reports blocked
+PASS: fixture login
+PASS: org reports blocked
+PASS: fixture login
+PASS: volunteer reports blocked
+PASS: fixture login
+PASS: report page renders filtered summaries
+PASS: reports navigation selected
+PASS: report meanings visible without credentials
+PASS: invalid HTTP date filter rejected
+PASS: invalid HTTP date filter rejected
+PASS: invalid HTTP date filter rejected
+PASS: invalid HTTP date filter rejected
+PASS: empty reports explained
+PASS: dashboard links to reports
+PASS: reports never mutate overdue donations
+Only report test fixtures removed.
+
+=== admin_workflow ===
+PASS: fixture login
+PASS: fixture login
+PASS: fixture login
+PASS: fixture login
+PASS: eligible donation exposes both controls
+PASS: non-admin reassignment blocked
+PASS: GET reassignment blocked
+PASS: reassignment CSRF enforced
+PASS: reassignment acknowledgement required
+PASS: invalid blocked replacement rejected
+PASS: invalid donor replacement rejected
+PASS: invalid a replacement rejected
+PASS: accepted reassignment rejected without mutation
+PASS: collected reassignment rejected without mutation
+PASS: delivered reassignment rejected without mutation
+PASS: completed reassignment rejected without mutation
+PASS: expired reassignment rejected without mutation
+PASS: cancelled reassignment rejected without mutation
+PASS: reassignment updates same task without duplicate or premature acceptance
+PASS: old volunteer loses task access
+PASS: new volunteer receives task
+PASS: old volunteer stale update rejected
+PASS: stale reassignment form rejected
+PASS: acceptance locks assignment
+PASS: non-admin cancellation blocked
+PASS: GET cancellation blocked
+PASS: cancellation CSRF enforced
+PASS: cancellation acknowledgement required
+PASS: collected cancellation rejected without mutation
+PASS: delivered cancellation rejected without mutation
+PASS: completed cancellation rejected without mutation
+PASS: cancelled cancellation rejected without mutation
+PASS: atomic cancellation for available
+PASS: retained task/decision history for available
+PASS: atomic cancellation for pending
+PASS: retained task/decision history for pending
+PASS: atomic cancellation for assigned
+PASS: retained task/decision history for assigned
+PASS: atomic cancellation for accepted
+PASS: retained task/decision history for accepted
+PASS: atomic cancellation for expired
+PASS: retained task/decision history for expired
+PASS: atomic cancellation for reassign
+PASS: retained task/decision history for reassign
+PASS: cancelled accepted task blocks pickup and hides delivery contacts
+PASS: inactive administrator service rejected
+Only administrator workflow fixtures removed.
+
+=== demo_setup ===
+PASS: demo import succeeds
+PASS: expected complete fixture counts
+PASS: existing administrator unchanged
+PASS: demo donor active with valid password hash
+PASS: demo organization active with valid password hash
+PASS: demo volunteer active with valid password hash
+PASS: live walkthrough food is currently available
+PASS: expired demonstration is past pickup window
+PASS: receipt-confirmed example provided
+PASS: delivery examples have ordered recorded milestones
+PASS: repeat import preserves workflow changes and creates nothing
+PASS: conflicting account aborts without adding records
+PASS: collision does not replace existing identity
+PASS: missing administrator aborts without partial data
+PASS: real database row counts untouched by isolated seed tests
+Temporary demo-test tables removed.
+
+21 suites finished; 0 failed checks.
