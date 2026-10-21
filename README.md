@@ -14,7 +14,7 @@
 
 ## 📖 Overview
 
-The **Community Food Donation Coordination System** is a web-based application designed to connect food donors, community organizations, and collection volunteers through one centralized platform. It aims to help reduce food waste, improve donation coordination, and support the distribution of surplus food to communities in need.
+The **Community Food Donation Coordination System** is a web-based application designed to connect food donors, community organizations, and collection volunteers through one centralized platform. It aims to help reduce food waste,improve donation coordination, and support the distribution of surplus food to communities in need.
 
 The platform provides role-specific features for donors, community organizations, collection volunteers, and administrators. It supports the donation process from food listing and requests through collection, delivery, and receipt confirmation.
 
