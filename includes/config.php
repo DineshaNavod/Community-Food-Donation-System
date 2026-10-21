@@ -25,7 +25,7 @@ define(
 // Keep the existing application path.
 define(
     'APP_BASE_PATH',
-    '/' . rawurlencode(basename(dirname(__DIR__)))
+    rtrim($_ENV['APP_BASE_PATH'] ?? '', '/')
 );
 
 // Preserve the constant names used by the existing application.
